@@ -3,12 +3,12 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv('data/baby_names/merged.csv')
 
-gregory = df[df['Name'] == 'Gregory']
+grant = df[df['Name'] == 'Kwon']
 
-gregory_by_year = gregory.groupby('Year').sum()
+grant_by_year = grant.groupby('Year').sum()
 
-plt.plot(gregory_by_year.index, gregory_by_year['Count'])
+plt.plot(grant_by_year.index, grant_by_year['Count'])
 plt.xlabel('Year')
 plt.ylabel('Count')
-plt.title('Gregory by Year')
+plt.title('Grant by Year')
 plt.show()
